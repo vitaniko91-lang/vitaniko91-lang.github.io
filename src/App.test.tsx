@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen, within } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 import App from './App'
 
@@ -16,11 +16,20 @@ describe('App', () => {
 
   it('renders the designer-who-ships pitch', () => {
     render(<App />)
-    expect(screen.getByText(/idea to live/i)).toBeInTheDocument()
+    // The phrase appears in the hero statement and is echoed in the footer.
+    expect(screen.getAllByText(/idea to live/i).length).toBeGreaterThan(0)
   })
 
   it('wires the primary nav "Work" link to the work section', () => {
     render(<App />)
-    expect(screen.getByRole('link', { name: 'Work' })).toHaveAttribute('href', '#work')
+    const primary = screen.getByRole('navigation', { name: 'Primary' })
+    expect(within(primary).getByRole('link', { name: 'Work' })).toHaveAttribute('href', '#work')
+  })
+
+  it('renders the About, Contact and Footer landmarks', () => {
+    const { container } = render(<App />)
+    expect(container.querySelector('#about')).toBeInTheDocument()
+    expect(container.querySelector('#contact')).toBeInTheDocument()
+    expect(container.querySelector('footer')).toBeInTheDocument()
   })
 })
