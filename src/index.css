@@ -3,6 +3,17 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    /* Offset in-page anchor jumps so targets clear the fixed nav. */
+    scroll-padding-top: 6rem;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
   body {
     @apply bg-bg-base text-paper font-sans antialiased;
   }
