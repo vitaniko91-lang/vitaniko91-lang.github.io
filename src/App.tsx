@@ -14,8 +14,18 @@ import { Work } from './sections/Work'
 export default function App() {
   return (
     <>
+      {/* Skip link: first focusable element, hidden until keyboard focus, then a
+          chartreuse chip top-left. Moves focus past the nav to the main content. */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-accent focus:px-4 focus:py-2.5 focus:font-display focus:text-sm focus:font-semibold focus:text-bg-base focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-paper focus:ring-offset-2 focus:ring-offset-bg-base"
+      >
+        Skip to content
+      </a>
       <Nav />
-      <main>
+      {/* tabIndex=-1 so the skip link actually moves focus here; the visible
+          affordance is the skip chip + content scrolling into view. */}
+      <main id="main-content" tabIndex={-1} className="focus:outline-none">
         <Hero />
         <Work />
         <About />

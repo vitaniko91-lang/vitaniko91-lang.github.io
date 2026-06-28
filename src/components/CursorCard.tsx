@@ -113,9 +113,15 @@ export function CursorCard({
     // Hover / keyboard-focus affordances. The CSS lift applies on keyboard
     // focus (no inline transform) and on static cards; the JS tilt overrides
     // it via the inline transform while a fine pointer is over the card.
+    // The card is a non-focusable <div>; its real focus target is the stretched
+    // Live link inside. When any link in the card is focused, focus-within lifts
+    // the card and turns its whole border chartreuse — a clear, forced-colors-
+    // safe card-level focus cue that complements each link's own accent ring.
     'hover:-translate-y-1 hover:border-line-bright',
-    'focus-within:-translate-y-1 focus-within:border-line-bright',
-    'focus-visible:border-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2',
+    'focus-within:-translate-y-1 focus-within:border-accent',
+    // When CursorCard is itself the link (`as`/`href` = 'a'), it carries its own
+    // chartreuse focus ring; harmless on the non-focusable <div> variant.
+    'focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2',
     // Reduced motion: keep the border feedback, drop the animated movement.
     'motion-reduce:transition-[border-color]',
     className,

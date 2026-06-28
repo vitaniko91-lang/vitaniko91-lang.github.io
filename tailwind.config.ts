@@ -17,7 +17,10 @@ export default {
         },
         paper: '#F4F5F7', // primary text — cool warm-white
         muted: '#9DA1AB', // secondary text
-        faint: '#5A5E68', // tertiary / meta
+        // tertiary / meta — eyebrows, labels, tags, credit. Raised from #5A5E68
+        // (2.8–3.0:1, WCAG-AA FAIL on near-black) to clear 4.5:1 on base (5.34:1)
+        // & raised (5.01:1) while staying visibly below muted's tier.
+        faint: '#828691',
         accent: {
           DEFAULT: '#C6F24E', // signature electric chartreuse
           dim: '#8FB23A',

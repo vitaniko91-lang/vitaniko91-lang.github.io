@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'motion/react'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Button } from '../components/Button'
 import { Container } from '../components/Container'
 import { Icon } from '../components/Icon'
@@ -60,6 +60,7 @@ export function Nav() {
   const reduced = useReducedMotion()
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  const triggerRef = useRef<HTMLButtonElement | null>(null)
 
   // Passive scroll listener — only flips a boolean, never reads layout.
   useEffect(() => {
@@ -69,11 +70,15 @@ export function Nav() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Esc closes the mobile menu.
+  // Esc closes the mobile menu and returns focus to the trigger, so keyboard
+  // users land back on a known control instead of losing focus to the body.
   useEffect(() => {
     if (!open) return
     const onKey = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') setOpen(false)
+      if (event.key === 'Escape') {
+        setOpen(false)
+        triggerRef.current?.focus()
+      }
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
@@ -128,6 +133,7 @@ export function Nav() {
 
         {/* Mobile menu trigger. */}
         <button
+          ref={triggerRef}
           type="button"
           aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}
