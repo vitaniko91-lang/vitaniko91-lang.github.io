@@ -34,7 +34,7 @@ export const cases: CaseItem[] = [
     artDirection: 'Living Terminal — dark · mono',
     tags: ['React', 'Tailwind', 'Motion'],
     thumb: '/cases/ollama.webp',
-    live: 'https://vitaniko91-lang.github.io/ollama-redesign/',
+    live: 'https://ollama-redesign.vercel.app',
     code: 'https://github.com/vitaniko91-lang/ollama-redesign',
   },
   {
@@ -46,7 +46,7 @@ export const cases: CaseItem[] = [
     artDirection: 'Editorial Atelier — light · serif',
     tags: ['Branding', 'React', 'Motion'],
     thumb: '/cases/helm.webp',
-    live: 'https://vitaniko91-lang.github.io/helm/',
+    live: 'https://helm-ai-studio.vercel.app',
     code: 'https://github.com/vitaniko91-lang/helm',
   },
   {
