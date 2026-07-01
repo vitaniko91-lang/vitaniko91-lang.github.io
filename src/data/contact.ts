@@ -5,8 +5,8 @@
  * real URLs are known.
  */
 
-/** Primary contact address. Placeholder — swap for the real inbox. */
-export const EMAIL = 'hello@vitalinanikulina.com'
+/** Primary contact address. */
+export const EMAIL = 'vita.niko91@gmail.com'
 
 export interface SocialLink {
   /** Visible label + accessible-name root. */
@@ -18,10 +18,10 @@ export interface SocialLink {
 }
 
 export const socials: SocialLink[] = [
-  { label: 'X', href: '#', icon: 'simple-icons:x' },
+  { label: 'X', href: 'https://x.com/VitalinaN96916', icon: 'simple-icons:x' },
   { label: 'GitHub', href: 'https://github.com/vitaniko91-lang', icon: 'simple-icons:github' },
-  { label: 'LinkedIn', href: '#', icon: 'simple-icons:linkedin' },
-  { label: 'Behance', href: '#', icon: 'simple-icons:behance' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/vitalina-nikulina-0a3088215/', icon: 'simple-icons:linkedin' },
+  { label: 'Behance', href: 'https://www.behance.net/56wnbww4xp93e7', icon: 'simple-icons:behance' },
 ]
 
 /** A real, off-site URL (gets a new tab + safe rel); `#` placeholders do not. */
