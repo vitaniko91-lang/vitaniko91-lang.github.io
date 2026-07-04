@@ -21,10 +21,34 @@ export interface CaseItem {
 }
 
 /**
- * Selected work — three shipped projects, three distinct art directions.
- * The range is the point: each case owns its own visual world.
+ * Selected work — shipped projects, each with a distinct art direction.
+ * The range is the point: every case owns its own visual world.
  */
 export const cases: CaseItem[] = [
+  {
+    id: 'relay',
+    name: 'Relay — AI-Agent Dashboard',
+    kicker: 'Product UI',
+    blurb:
+      'A live observability dashboard for teams running AI agents in production — every run, cost, and failure in one place, down to the step-by-step trace.',
+    artDirection: 'Dark Ops-Tool — slate · cyan',
+    tags: ['React', 'TypeScript', 'Data viz'],
+    thumb: '/cases/relay.webp',
+    live: 'https://vitaniko91-lang.github.io/relay/',
+    code: 'https://github.com/vitaniko91-lang/relay',
+  },
+  {
+    id: 'stillpoint',
+    name: 'Stillpoint — Breathwork App',
+    kicker: 'Wellness product',
+    blurb:
+      'A calm breathwork guide you use right in the browser — a live breathing orb, coherence / box / 4-7-8 patterns, and a focused timed session.',
+    artDirection: 'Warm Calm — paper · serif',
+    tags: ['React', 'Motion', 'Web Audio'],
+    thumb: '/cases/stillpoint.webp',
+    live: 'https://vitaniko91-lang.github.io/stillpoint/',
+    code: 'https://github.com/vitaniko91-lang/stillpoint',
+  },
   {
     id: 'ollama',
     name: 'Ollama — Concept Redesign',

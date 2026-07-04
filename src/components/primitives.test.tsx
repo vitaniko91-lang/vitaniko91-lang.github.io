@@ -47,12 +47,17 @@ describe('CursorCard', () => {
 })
 
 describe('cases data', () => {
-  it('exports three cases with valid live/code URLs and thumb paths', () => {
-    expect(cases).toHaveLength(3)
+  it('exports cases with valid live/code URLs and thumb paths', () => {
+    expect(cases.length).toBeGreaterThanOrEqual(5)
     for (const item of cases) {
       expect(item.live).toMatch(/^https:\/\//)
       expect(item.code).toMatch(/^https:\/\/github\.com\//)
       expect(item.thumb).toMatch(/^\/cases\/.+\.webp$/)
     }
+  })
+
+  it('has unique case ids', () => {
+    const ids = cases.map((c) => c.id)
+    expect(new Set(ids).size).toBe(ids.length)
   })
 })
