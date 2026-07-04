@@ -34,7 +34,7 @@ export const cases: CaseItem[] = [
     artDirection: 'Dark Ops-Tool — slate · cyan',
     tags: ['React', 'TypeScript', 'Data viz'],
     thumb: '/cases/relay.webp',
-    live: 'https://vitaniko91-lang.github.io/relay/',
+    live: 'https://relay-obs.vercel.app',
     code: 'https://github.com/vitaniko91-lang/relay',
   },
   {
@@ -46,7 +46,7 @@ export const cases: CaseItem[] = [
     artDirection: 'Warm Calm — paper · serif',
     tags: ['React', 'Motion', 'Web Audio'],
     thumb: '/cases/stillpoint.webp',
-    live: 'https://vitaniko91-lang.github.io/stillpoint/',
+    live: 'https://stillpoint-app.vercel.app',
     code: 'https://github.com/vitaniko91-lang/stillpoint',
   },
   {
