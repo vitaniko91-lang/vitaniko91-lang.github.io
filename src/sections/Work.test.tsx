@@ -14,7 +14,7 @@ describe('Work — Selected Work centerpiece', () => {
   it('calls out the range explicitly', () => {
     render(<Work />)
     expect(
-      screen.getByText(/Three projects, three art directions — all designed, built, and shipped\./i),
+      screen.getByText(/Every project its own art direction — all designed, built, and shipped\./i),
     ).toBeInTheDocument()
   })
 

@@ -26,6 +26,18 @@ export interface CaseItem {
  */
 export const cases: CaseItem[] = [
   {
+    id: 'meridian',
+    name: 'MERIDIAN — Payment, Slowed 4,000×',
+    kicker: 'Award showpiece',
+    blurb:
+      'The life of a single B2B payment, slowed 4,000× and told as one GPU particle river across seven chapters — here, scroll drives time, not space.',
+    artDirection: 'Vault Light — black · champagne gold',
+    tags: ['three.js', 'WebGL', 'Motion'],
+    thumb: '/cases/meridian.webp',
+    live: 'https://meridian-settlement.vercel.app',
+    code: 'https://github.com/vitaniko91-lang/meridian',
+  },
+  {
     id: 'relay',
     name: 'Relay — AI-Agent Dashboard',
     kicker: 'Product UI',

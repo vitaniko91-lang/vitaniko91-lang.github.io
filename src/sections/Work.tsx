@@ -39,7 +39,7 @@ export function Work() {
           Proof of range.
         </h2>
         <p className="mt-4 max-w-2xl font-sans text-lg leading-relaxed text-muted">
-          Three projects, three art directions — all designed, built, and shipped.
+          Every project its own art direction — all designed, built, and shipped.
         </p>
       </Reveal>
 
