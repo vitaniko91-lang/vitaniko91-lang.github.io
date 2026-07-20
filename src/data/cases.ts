@@ -26,6 +26,18 @@ export interface CaseItem {
  */
 export const cases: CaseItem[] = [
   {
+    id: 'timbre',
+    name: 'TIMBRE — See the Sound',
+    kicker: 'Award showpiece',
+    blurb:
+      'A fictional premium-audio brand whose hero is a single drop of liquid glass — play a track and it ripples, refracts and re-colors in real time to the sound itself, frequency by frequency.',
+    artDirection: 'Pearl Prism — pearl-white · spectral glass',
+    tags: ['three.js', 'WebGL', 'Web Audio'],
+    thumb: '/cases/timbre.webp',
+    live: 'https://timbre-ruby.vercel.app',
+    code: 'https://github.com/vitaniko91-lang/timbre',
+  },
+  {
     id: 'meridian',
     name: 'MERIDIAN — Payment, Slowed 4,000×',
     kicker: 'Award showpiece',
