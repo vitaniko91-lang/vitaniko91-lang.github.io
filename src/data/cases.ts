@@ -50,6 +50,18 @@ export const cases: CaseItem[] = [
     code: 'https://github.com/vitaniko91-lang/meridian',
   },
   {
+    id: 'fairfare',
+    name: 'FAIRFARE — An Honest Booking Flow',
+    kicker: 'Unsolicited redesign',
+    blurb:
+      "Ryanair's checkout is a masterclass in dark patterns. I audited the live flow, named every pattern, and rebuilt it without them — keeping each place the airline actually makes money.",
+    artDirection: 'Redesign, not rebrand — navy · scarce yellow',
+    tags: ['React', 'TypeScript', 'UX audit'],
+    thumb: '/cases/fairfare.webp',
+    live: 'https://fairfare.vercel.app',
+    code: 'https://github.com/vitaniko91-lang/fairfare',
+  },
+  {
     id: 'relay',
     name: 'Relay — AI-Agent Dashboard',
     kicker: 'Product UI',
