@@ -26,6 +26,18 @@ export interface CaseItem {
  */
 export const cases: CaseItem[] = [
   {
+    id: 'crucible',
+    name: 'Crucible — Agent Workbench',
+    kicker: 'Product showpiece',
+    blurb:
+      'A design-time workbench for AI agents: build one on a canvas, then prove it holds — evals, an LLM judge, and version diffs that catch a real policy failure before it ships. The design-time companion to Relay’s production view.',
+    artDirection: 'Petrol Chrome — deep petrol · liquid azure',
+    tags: ['React', 'TypeScript', 'Motion'],
+    thumb: '/cases/crucible.webp',
+    live: 'https://crucible-tau.vercel.app',
+    code: 'https://github.com/vitaniko91-lang/crucible',
+  },
+  {
     id: 'timbre',
     name: 'TIMBRE — See the Sound',
     kicker: 'Award showpiece',
