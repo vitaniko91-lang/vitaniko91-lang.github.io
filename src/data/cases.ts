@@ -50,6 +50,18 @@ export const cases: CaseItem[] = [
     code: 'https://github.com/vitaniko91-lang/timbre',
   },
   {
+    id: 'timbre-ads',
+    name: 'TIMBRE Ad System',
+    kicker: 'Campaign system',
+    blurb:
+      'The paid-social layer for the TIMBRE brand: six angles, four placements, four layouts and three spectral moods, composed live in the browser and exported as the exact PNGs a media buyer uploads.',
+    artDirection: 'Pearl Prism, inherited — the brand’s own voice in a bought placement',
+    tags: ['React', 'TypeScript', 'Creative ops'],
+    thumb: '/cases/timbre-ads.webp',
+    live: 'https://timbre-ads.vercel.app',
+    code: 'https://github.com/vitaniko91-lang/timbre-ads',
+  },
+  {
     id: 'meridian',
     name: 'MERIDIAN — Payment, Slowed 4,000×',
     kicker: 'Award showpiece',
