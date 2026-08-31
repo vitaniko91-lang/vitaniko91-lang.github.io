@@ -2,7 +2,7 @@ import { Icon } from '../components/Icon'
 import { Reveal } from '../components/Reveal'
 import { Section } from '../components/Section'
 import { SocialLinks } from '../components/SocialLinks'
-import { EMAIL } from '../data/contact'
+import { CV_HREF, EMAIL } from '../data/contact'
 
 /**
  * Contact — the closing invitation. A big confident Schibsted line makes the
@@ -51,6 +51,27 @@ export function Contact() {
             name="lucide:arrow-up-right"
             className="size-[clamp(1.25rem,3vw,2rem)] shrink-0 translate-y-1 transition-transform duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:-translate-y-0 group-hover:translate-x-0.5 motion-reduce:transition-none"
           />
+        </a>
+      </Reveal>
+
+      {/* The CV sits under the email as the quieter second action — muted, not
+          chartreuse, so the single accent stays on the primary ask. */}
+      <Reveal delay={0.18}>
+        <a
+          href={CV_HREF}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Curriculum vitae, PDF (opens in a new tab)"
+          className="group mt-7 inline-flex items-center gap-2 rounded-sm font-sans text-sm text-muted transition-colors duration-200 hover:text-paper focus-visible:text-paper focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-4"
+        >
+          <Icon name="lucide:file-text" className="size-4 shrink-0" />
+          <span className="relative">
+            CV — one page, PDF
+            <span
+              aria-hidden
+              className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-accent transition-transform duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-x-100 group-focus-visible:scale-x-100 motion-reduce:transition-none"
+            />
+          </span>
         </a>
       </Reveal>
 

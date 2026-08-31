@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 import { Contact } from './Contact'
-import { EMAIL } from '../data/contact'
+import { CV_HREF, EMAIL } from '../data/contact'
 
 describe('Contact — closing CTA', () => {
   it('renders the big confident invitation', () => {
@@ -23,6 +23,14 @@ describe('Contact — closing CTA', () => {
     expect(github).toHaveAttribute('href', 'https://github.com/vitaniko91-lang')
     expect(github).toHaveAttribute('target', '_blank')
     expect(github).toHaveAttribute('rel', expect.stringContaining('noopener'))
+  })
+
+  it('offers the CV as a PDF, opening in a new tab with a safe rel', () => {
+    render(<Contact />)
+    const cv = screen.getByRole('link', { name: /curriculum vitae|\bCV\b/i })
+    expect(cv).toHaveAttribute('href', CV_HREF)
+    expect(cv).toHaveAttribute('target', '_blank')
+    expect(cv).toHaveAttribute('rel', expect.stringContaining('noopener'))
   })
 
   it('renders all four social links', () => {

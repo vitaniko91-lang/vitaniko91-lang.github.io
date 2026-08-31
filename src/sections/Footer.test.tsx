@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 import { Footer } from './Footer'
+import { CV_HREF } from '../data/contact'
 
 describe('Footer', () => {
   it('is a semantic footer with the wordmark and one-line pitch', () => {
@@ -20,6 +21,13 @@ describe('Footer', () => {
   it('renders a back-to-top link pointing at the hero', () => {
     render(<Footer />)
     expect(screen.getByRole('link', { name: /back to top/i })).toHaveAttribute('href', '#top')
+  })
+
+  it('repeats the CV link in the footer nav', () => {
+    render(<Footer />)
+    const cv = screen.getByRole('link', { name: /curriculum vitae|\bCV\b/i })
+    expect(cv).toHaveAttribute('href', CV_HREF)
+    expect(cv).toHaveAttribute('target', '_blank')
   })
 
   it('repeats the real GitHub link in a new tab', () => {

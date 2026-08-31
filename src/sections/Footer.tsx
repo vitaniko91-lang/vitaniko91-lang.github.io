@@ -1,6 +1,7 @@
 import { Container } from '../components/Container'
 import { Icon } from '../components/Icon'
 import { SocialLinks } from '../components/SocialLinks'
+import { CV_HREF } from '../data/contact'
 import { cx } from '../lib/cx'
 
 const navLinks = [
@@ -46,6 +47,16 @@ export function Footer() {
                   {link.label}
                 </a>
               ))}
+              {/* The CV is the one off-page destination in this column. */}
+              <a
+                href={CV_HREF}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Curriculum vitae, PDF (opens in a new tab)"
+                className={linkClass}
+              >
+                CV
+              </a>
             </nav>
             <SocialLinks orientation="vertical" />
           </div>

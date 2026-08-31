@@ -8,6 +8,13 @@
 /** Primary contact address. */
 export const EMAIL = 'vita.niko91@gmail.com'
 
+/**
+ * The one-page CV, served from `public/` so the URL stays stable and readable.
+ * Rebuilt from `docs/portfolio/cv/build-cv.py`; re-copy the PDF here whenever
+ * that file changes, or the hub quietly serves a stale résumé.
+ */
+export const CV_HREF = '/Vitalina-Nikulina-CV.pdf'
+
 export interface SocialLink {
   /** Visible label + accessible-name root. */
   label: string
