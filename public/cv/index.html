@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CV — Vitalina Nikulina, Product Designer &amp; Front-End Developer</title>
+    <meta
+      name="description"
+      content="One-page CV. Designer who ships production code — research and Figma through to a deployed React / Next.js build, one person."
+    />
+    <meta name="theme-color" content="#0C0D10" />
+    <link rel="canonical" href="https://vitaniko91-lang.github.io/cv/" />
+
+    <!-- Open Graph. Absolute URLs: LinkedIn and Slack resolve these server-side,
+         where a root-relative path has no origin to resolve against. -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://vitaniko91-lang.github.io/cv/" />
+    <meta
+      property="og:title"
+      content="CV — Vitalina Nikulina, Product Designer & Front-End Developer"
+    />
+    <meta
+      property="og:description"
+      content="Three years, ten live sites taken solo from research and Figma through to a deployed React / Next.js build — no design→dev handoff."
+    />
+    <meta property="og:image" content="https://vitaniko91-lang.github.io/cv-og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Vitalina Nikulina — curriculum vitae, one page."
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="CV — Vitalina Nikulina, Product Designer & Front-End Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="Three years, ten live sites taken solo from research and Figma through to a deployed React / Next.js build."
+    />
+    <meta name="twitter:image" content="https://vitaniko91-lang.github.io/cv-og.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700&family=Figtree:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      body,
+      h1,
+      p,
+      figure {
+        margin: 0;
+      }
+
+      :root {
+        --bg: #0c0d10;
+        --raised: #141519;
+        --paper: #f4f5f7;
+        --muted: #9da1ab;
+        --faint: #828691;
+        --accent: #c6f24e;
+        --line: rgba(244, 245, 247, 0.1);
+        --ease: cubic-bezier(0.23, 1, 0.32, 1);
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--paper);
+        font-family: 'Figtree', system-ui, sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        text-wrap: pretty;
+      }
+
+      .wrap {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 24px 72px;
+      }
+
+      /* Back to the hub — the only navigation this page needs. */
+      .back {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 14px;
+        border-radius: 2px;
+        transition: color 0.2s var(--ease);
+      }
+      .back:hover,
+      .back:focus-visible {
+        color: var(--paper);
+      }
+      .back:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 4px;
+      }
+
+      .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 48px;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+      .eyebrow i {
+        display: block;
+        width: 28px;
+        height: 1px;
+        background: var(--accent);
+      }
+
+      h1 {
+        font-family: 'Schibsted Grotesk', system-ui, sans-serif;
+        font-weight: 700;
+        font-size: clamp(2.25rem, 6vw, 3.75rem);
+        line-height: 1;
+        letter-spacing: -0.03em;
+        margin-top: 20px;
+        text-wrap: balance;
+      }
+      h1 .dot {
+        color: var(--accent);
+      }
+
+      .lede {
+        margin-top: 20px;
+        max-width: 54ch;
+        color: var(--muted);
+        font-size: clamp(1rem, 2.2vw, 1.125rem);
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 32px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        min-height: 44px;
+        padding: 12px 22px;
+        border-radius: 4px;
+        font-weight: 600;
+        font-size: 15px;
+        text-decoration: none;
+        transition:
+          background-color 0.2s var(--ease),
+          color 0.2s var(--ease),
+          border-color 0.2s var(--ease);
+      }
+      .btn-primary {
+        background: var(--accent);
+        color: #10130a;
+      }
+      .btn-primary:hover {
+        background: #d3f76d;
+      }
+      .btn-ghost {
+        border: 1px solid var(--line);
+        color: var(--paper);
+      }
+      .btn-ghost:hover {
+        border-color: rgba(244, 245, 247, 0.28);
+      }
+      .btn:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 4px;
+      }
+
+      /* The document itself. <object> renders the real PDF where the browser
+         supports it; the <img> inside is the fallback iOS and Android show
+         instead, so the CV is always readable without a download. */
+      figure {
+        margin: 44px auto 0;
+        max-width: 880px;
+        border: 1px solid var(--line);
+        background: var(--raised);
+        padding: 12px;
+      }
+      /* A4 proportion, so the embedded page fills the frame exactly instead of
+         leaving dead space below it at any width. */
+      .doc {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1 / 1.414;
+        border: 0;
+        background: #fff;
+      }
+      .doc-fallback {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      figcaption {
+        margin-top: 12px;
+        color: var(--faint);
+        font-size: 13px;
+      }
+
+      footer {
+        margin-top: 56px;
+        padding-top: 24px;
+        border-top: 1px solid var(--line);
+        color: var(--faint);
+        font-size: 13px;
+      }
+      footer a {
+        color: var(--muted);
+        text-decoration: none;
+        border-radius: 2px;
+      }
+      footer a:hover,
+      footer a:focus-visible {
+        color: var(--accent);
+      }
+      footer a:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 4px;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .back,
+        .btn {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <a class="back" href="/">← Vitalina Nikulina</a>
+
+      <header>
+        <p class="eyebrow"><i aria-hidden="true"></i>Curriculum Vitae</p>
+        <h1>Product Designer &amp;<br />Front-End Developer<span class="dot">.</span></h1>
+        <p class="lede">
+          Three years, ten live sites taken solo — research and Figma through to a deployed
+          React&nbsp;/&nbsp;Next.js build, with no design→dev handoff. One page, below.
+        </p>
+
+        <div class="actions">
+          <a class="btn btn-primary" href="/Vitalina-Nikulina-CV.pdf" download>
+            Download PDF
+          </a>
+          <a
+            class="btn btn-ghost"
+            href="/Vitalina-Nikulina-CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open in a new tab
+          </a>
+          <a class="btn btn-ghost" href="/#work">See the work</a>
+        </div>
+      </header>
+
+      <figure>
+        <!-- #toolbar=0&navpanes=0 drops the built-in viewer chrome and the
+             thumbnail rail, which otherwise squeeze the page down to ~37%.
+             view=FitH makes it fill the width instead. -->
+        <object
+          class="doc"
+          data="/Vitalina-Nikulina-CV.pdf#toolbar=0&navpanes=0&view=FitH"
+          type="application/pdf"
+          aria-label="Curriculum vitae of Vitalina Nikulina, one page"
+        >
+          <img
+            class="doc-fallback"
+            src="/cv-page.png"
+            alt="CV — Vitalina Nikulina. Experience: IN AI, product and web designer, April to August 2026; freelance UI/UX and web designer since 2023. Selected work: Crucible, FAIRFARE, MERIDIAN. Skills across design, engineering and AI."
+          />
+        </object>
+        <figcaption>
+          One page, PDF · 237&nbsp;KB. If the viewer above doesn’t load, use “Download PDF”.
+        </figcaption>
+      </figure>
+
+      <footer>
+        <a href="mailto:vita.niko91@gmail.com">vita.niko91@gmail.com</a> ·
+        <a href="https://www.linkedin.com/in/vitalina-nikulina-0a3088215/" target="_blank" rel="noopener noreferrer">LinkedIn</a> ·
+        <a href="https://github.com/vitaniko91-lang" target="_blank" rel="noopener noreferrer">GitHub</a> ·
+        <a href="/">Portfolio</a>
+      </footer>
+    </div>
+  </body>
+</html>

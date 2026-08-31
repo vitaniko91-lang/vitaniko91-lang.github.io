@@ -9,11 +9,14 @@
 export const EMAIL = 'vita.niko91@gmail.com'
 
 /**
- * The one-page CV, served from `public/` so the URL stays stable and readable.
- * Rebuilt from `docs/portfolio/cv/build-cv.py`; re-copy the PDF here whenever
- * that file changes, or the hub quietly serves a stale résumé.
+ * The CV landing page (`public/cv/index.html`), not the raw PDF. It carries its
+ * own Open Graph tags, so a shared link renders a real preview card — LinkedIn
+ * refuses to build one for a bare PDF URL and then won't accept the link at all.
+ * The PDF itself sits at `/Vitalina-Nikulina-CV.pdf` and is the page's first
+ * action. Rebuilt from `docs/portfolio/cv/build-cv.py`; re-copy the PDF into
+ * `public/` whenever that changes, or the hub quietly serves a stale résumé.
  */
-export const CV_HREF = '/Vitalina-Nikulina-CV.pdf'
+export const CV_HREF = '/cv/'
 
 export interface SocialLink {
   /** Visible label + accessible-name root. */
