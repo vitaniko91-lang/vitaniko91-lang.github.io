@@ -12,11 +12,16 @@ export interface CaseItem {
   tags: string[]
   /** Path to the optimized thumbnail in /public. */
   thumb: string
+  /** Where the card's cover crop anchors when the column is narrower than the
+   *  image. Default is centre; 'left' keeps a left-set headline whole. */
+  thumbFocus?: 'left'
   /** Live, deployed site. */
   live: string
-  /** Source code repository. */
-  code: string
-  /** Optional in-hub case study route. */
+  /** Source code repository. Absent when the deliverable is design, not code. */
+  code?: string
+  /** Public Figma file — the design source, shown when it is the deliverable. */
+  figma?: string
+  /** Case study: an in-hub route, or an absolute URL on the project's own site. */
   caseStudy?: string
 }
 
@@ -36,6 +41,20 @@ export const cases: CaseItem[] = [
     thumb: '/cases/crucible.webp',
     live: 'https://crucible-tau.vercel.app',
     code: 'https://github.com/vitaniko91-lang/crucible',
+  },
+  {
+    id: 'last',
+    name: 'LAST — Care for Things You Keep',
+    kicker: 'DTC commerce, design-led',
+    blurb:
+      'A leather-care brand built from a category audit: four shops, none of which asks you to reorder. The answer is a four-question configurator that assembles a kit, prices how long it lasts, and refuses what would harm the material. Public Figma file, live storefront, written case.',
+    artDirection: 'Patina — paper · cinematic dark · one teal accent',
+    tags: ['UX', 'Figma', 'E-commerce'],
+    thumb: '/cases/last.webp',
+    thumbFocus: 'left',
+    live: 'https://last-vitaniko91-langs-projects.vercel.app',
+    figma: 'https://www.figma.com/design/ztM2VHMovlutEykLNGPLVq',
+    caseStudy: 'https://last-vitaniko91-langs-projects.vercel.app/case',
   },
   {
     id: 'timbre',

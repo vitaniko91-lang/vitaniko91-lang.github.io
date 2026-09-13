@@ -51,7 +51,10 @@ describe('cases data', () => {
     expect(cases.length).toBeGreaterThanOrEqual(5)
     for (const item of cases) {
       expect(item.live).toMatch(/^https:\/\//)
-      expect(item.code).toMatch(/^https:\/\/github\.com\//)
+      // Code is optional: a design-led case ships a Figma file instead.
+      if (item.code) expect(item.code).toMatch(/^https:\/\/github\.com\//)
+      if (item.figma) expect(item.figma).toMatch(/^https:\/\/www\.figma\.com\//)
+      expect(item.code || item.figma).toBeTruthy()
       expect(item.thumb).toMatch(/^\/cases\/.+\.webp$/)
     }
   })

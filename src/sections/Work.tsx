@@ -78,7 +78,8 @@ function WorkCard({ item, index }: { item: CaseItem; index: number }) {
             loading={index === 0 ? 'eager' : 'lazy'}
             decoding="async"
             className={cx(
-              'h-full w-full object-cover object-top',
+              'h-full w-full object-cover',
+              item.thumbFocus === 'left' ? 'object-left-top' : 'object-top',
               'transition-transform duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]',
               'group-hover:scale-[1.03] group-focus-within:scale-[1.03]',
               'motion-reduce:transition-none motion-reduce:group-hover:scale-100 motion-reduce:group-focus-within:scale-100',
@@ -125,9 +126,15 @@ function WorkCard({ item, index }: { item: CaseItem; index: number }) {
           <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-line pt-6">
             <ActionLink href={item.live} label="Live" srName={item.name} stretched />
             {item.caseStudy ? (
-              <ActionLink href={item.caseStudy} label="Case study" srName={item.name} internal />
+              <ActionLink
+                href={item.caseStudy}
+                label="Case study"
+                srName={item.name}
+                internal={!/^https?:\/\//.test(item.caseStudy)}
+              />
             ) : null}
-            <ActionLink href={item.code} label="Code" srName={item.name} />
+            {item.figma ? <ActionLink href={item.figma} label="Figma" srName={item.name} /> : null}
+            {item.code ? <ActionLink href={item.code} label="Code" srName={item.name} /> : null}
           </div>
         </div>
       </div>
