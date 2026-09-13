@@ -77,10 +77,10 @@ describe('Work — Selected Work centerpiece', () => {
     }
   })
 
-  it('LAST is the pure-UX case: Live, external case study and Figma, no Code', () => {
+  it('LAST is the design-led case: Live, Code, external case study and Figma', () => {
     const last = cases.find((c) => c.id === 'last')
     expect(last).toBeDefined()
-    expect(last!.code).toBeUndefined()
+    expect(last!.code).toBe('https://github.com/vitaniko91-lang/last')
     expect(last!.figma).toMatch(/^https:\/\/www\.figma\.com\//)
     expect(last!.caseStudy).toBe('https://last-vitaniko91-langs-projects.vercel.app/case')
     expect(last!.tags).toEqual(['UX', 'Figma', 'E-commerce'])
