@@ -53,6 +53,7 @@ export const cases: CaseItem[] = [
     thumb: '/cases/last.webp',
     thumbFocus: 'left',
     live: 'https://last-vitaniko91-langs-projects.vercel.app',
+    code: 'https://github.com/vitaniko91-lang/last',
     figma: 'https://www.figma.com/design/ztM2VHMovlutEykLNGPLVq',
     caseStudy: 'https://last-vitaniko91-langs-projects.vercel.app/case',
   },
