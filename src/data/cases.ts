@@ -43,6 +43,18 @@ export const cases: CaseItem[] = [
     code: 'https://github.com/vitaniko91-lang/crucible',
   },
   {
+    id: 'ringmeter',
+    name: 'Ringmeter — Ring Size from One Photo',
+    kicker: 'Computer vision, on device',
+    blurb:
+      'Lay a ring beside a 20 mm marker, shoot from above, and the inner diameter comes back in millimetres — OpenCV in a Web Worker, nothing uploaded, $0.00 per image. Built as a test task and kept honest: 29 real photos with the ground truth committed before them, and the one systematic error it has is written on the page rather than tuned away.',
+    artDirection: 'Lab paper — warm paper · ink · a single teal',
+    tags: ['Computer vision', 'React', 'TypeScript'],
+    thumb: '/cases/ringmeter.webp',
+    live: 'https://ringmeter.vercel.app',
+    code: 'https://github.com/vitaniko91-lang/ringmeter',
+  },
+  {
     id: 'last',
     name: 'LAST — Care for Things You Keep',
     kicker: 'DTC commerce, design-led',
