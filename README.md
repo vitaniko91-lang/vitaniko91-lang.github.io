@@ -4,14 +4,15 @@ The home base for Vitalina Nikulina — designer & front-end engineer who design
 
 **Live:** https://vitaniko91-lang.github.io/
 
-A single-page hub with a confident opening statement and a Selected Work gallery of twelve shipped projects — each one its own distinct art direction, because the range is the point.
+A single-page hub with a confident opening statement and a Selected Work gallery of thirteen shipped projects — each one its own distinct art direction, because the range is the point.
 
 ## Selected work
 
-In gallery order. Every card links to the live site; most also link the source, and one carries a public Figma file and a written case study.
+In gallery order. Every card links to the live site; most also link the source, one carries a public Figma file, and two carry a written case study.
 
 | Project | What it is | Art direction | Links |
 |---|---|---|---|
+| **skintrack — Read the Slope** | A ski-touring navigator that puts route, slope angle and avalanche danger on one map: the Matterhorn from real elevation data as a chrome 3D mountain, a live phone prototype with its bad-day states, and a case study where every number links to its source. | Ice cyan — blue-black ground · chrome terrain · one glowing skin track | [Live](https://skintrack-app.vercel.app) · [Code](https://github.com/vitaniko91-lang/skintrack) · [Case](https://skintrack-app.vercel.app/case.html) |
 | **Ringmeter — Ring Size from One Photo** | Lay a ring beside a 20 mm marker, shoot from above, and the inner diameter comes back in millimetres. OpenCV in a Web Worker, nothing uploaded, $0.00 per image — with a committed test set of 29 real photos and the one systematic error written on the page rather than tuned away. | Lab paper — warm paper · ink · a single teal | [Live](https://ringmeter.vercel.app) · [Code](https://github.com/vitaniko91-lang/ringmeter) |
 | **Crucible — Agent Workbench** | A design-time workbench for AI agents: build one on a canvas, then prove it holds — evals, an LLM judge, and version diffs that catch a real policy failure before it ships. | Petrol Chrome — deep petrol · liquid azure | [Live](https://crucible-tau.vercel.app) · [Code](https://github.com/vitaniko91-lang/crucible) |
 | **LAST — Care for Things You Keep** | A leather-care brand built from a category audit: a four-question configurator that assembles a kit, prices how long it lasts, and refuses what would harm the material. | Patina — paper · cinematic dark · one teal accent | [Live](https://last-vitaniko91-langs-projects.vercel.app) · [Code](https://github.com/vitaniko91-lang/last) · [Figma](https://www.figma.com/design/ztM2VHMovlutEykLNGPLVq) · [Case](https://last-vitaniko91-langs-projects.vercel.app/case) |

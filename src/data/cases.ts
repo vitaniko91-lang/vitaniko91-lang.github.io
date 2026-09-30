@@ -31,6 +31,19 @@ export interface CaseItem {
  */
 export const cases: CaseItem[] = [
   {
+    id: 'skintrack',
+    name: 'skintrack — Read the Slope',
+    kicker: 'Product showpiece, safety-critical UX',
+    blurb:
+      'A ski-touring navigator that puts route, slope angle and avalanche danger on one map. The Matterhorn is real elevation data, rendered as a chrome 3D mountain with the route glowing across it; the phone prototype is live, including its bad-day states. The case study shows three decisions with their tradeoffs, and every number links to its source.',
+    artDirection: 'Ice cyan — blue-black ground · chrome terrain · one glowing skin track',
+    tags: ['Product design', 'WebGL', 'UX'],
+    thumb: '/cases/skintrack.webp',
+    live: 'https://skintrack-app.vercel.app',
+    code: 'https://github.com/vitaniko91-lang/skintrack',
+    caseStudy: 'https://skintrack-app.vercel.app/case.html',
+  },
+  {
     id: 'ringmeter',
     name: 'Ringmeter — Ring Size from One Photo',
     kicker: 'Computer vision, on device',
