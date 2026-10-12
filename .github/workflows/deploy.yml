@@ -32,6 +32,10 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          # PostHog project key: public by design (it ships in the client bundle).
+          # Set with `gh variable set VITE_POSTHOG_KEY`; empty = analytics off.
+          VITE_POSTHOG_KEY: ${{ vars.VITE_POSTHOG_KEY }}
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
