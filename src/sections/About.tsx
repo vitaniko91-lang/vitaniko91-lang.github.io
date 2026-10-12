@@ -61,14 +61,13 @@ export function About() {
 
         <Reveal delay={0.08} className="flex flex-col gap-5 lg:col-span-5 lg:pt-2">
           <p className="font-sans text-base leading-relaxed text-muted md:text-[17px]">
-            Most projects run a relay: a designer hands off a static mockup, a developer rebuilds
-            it, and the details get lost in the pass. I close that gap — I design it in Figma, build
-            it in React and Tailwind, and ship it live myself.
+            On most teams a designer hands off a mockup and a developer rebuilds it, and spacing,
+            motion and edge states get lost on the way. I do both halves: I design it in Figma,
+            build it in React and Tailwind, and ship it live myself.
           </p>
           <p className="font-sans text-base leading-relaxed text-muted md:text-[17px]">
-            So you get one person across the whole arc — visual direction, interaction,
-            accessibility, performance, deploy. No handoff, no telephone game. The site ships
-            exactly as designed.
+            Visual direction, interaction, accessibility, performance and deploy stay with one
+            person, so the site you approve is the site that ships.
           </p>
         </Reveal>
       </div>

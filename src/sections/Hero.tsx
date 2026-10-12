@@ -5,6 +5,7 @@ import type { CSSProperties } from 'react'
 import { Button } from '../components/Button'
 import { Container } from '../components/Container'
 import { Icon } from '../components/Icon'
+import { cases } from '../data/cases'
 import { useReducedMotion } from '../lib/useReducedMotion'
 
 const EASE = [0.23, 1, 0.32, 1] as const
@@ -23,7 +24,7 @@ const item: Variants = {
 }
 
 /**
- * The hub's confident opening statement: who she is, the rare combo, and the
+ * The hub's confident opening statement: the promise, how it's kept, and the
  * two ways in (see the work / start a project). A faint chartreuse glow tracks
  * the cursor across the dark canvas as the gallery's ambient signature; on
  * touch / reduced-motion it settles into a static glow and the entrance plays
@@ -102,50 +103,44 @@ export function Hero() {
             Designer &amp; Front-End Engineer
           </motion.p>
 
-          {/* The statement. One chartreuse accent word ("ship"); the qualifier
+          {/* The statement. One chartreuse accent ("goes live"); the qualifier
               is a quieter, smaller muted line for editorial hierarchy. */}
           <h1 className="mt-7 font-display font-bold tracking-[-0.03em] text-paper">
             <motion.span
               variants={item}
-              className="block text-[clamp(2.125rem,6.2vw,4.75rem)] leading-[0.98]"
+              className="block text-balance text-[clamp(2.125rem,6.2vw,4.75rem)] leading-[0.98]"
             >
-              I design and <span className="text-accent">ship</span>
+              What you approve in Figma is what <span className="text-accent">goes live</span>.
             </motion.span>
+            {' '}
             <motion.span
               variants={item}
-              className="block text-[clamp(2.125rem,6.2vw,4.75rem)] leading-[0.98]"
+              className="mt-3 block text-balance text-[clamp(1.375rem,3vw,2.25rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-muted"
             >
-              production-ready websites.
-            </motion.span>
-            <motion.span
-              variants={item}
-              className="mt-3 block text-[clamp(1.375rem,3vw,2.25rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-muted"
-            >
-              One person — from idea to live.
+              Designed and coded by one person.
             </motion.span>
           </h1>
 
-          {/* The rare combo, plainly stated. */}
+          {/* How the promise is kept, plainly stated. */}
           <motion.p
             variants={item}
             className="mt-7 max-w-[560px] font-sans text-base leading-relaxed text-muted md:text-lg"
           >
-            The rare combo: I design in Figma, then build it in React, TypeScript &amp; Tailwind
-            and deploy — no handoff, no telephone game. From concept to a live, fast, accessible
-            site, end to end.
+            I design in Figma, build in React, TypeScript and Tailwind, and deploy it myself.
+            Nothing gets lost between the mockup and the live site.
           </motion.p>
 
           {/* Two ways in. */}
           <motion.div variants={item} className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
             <Button href="#work" variant="primary">
-              See the work
+              See {cases.length} live projects
               <Icon
                 name="lucide:arrow-down"
                 className="size-4 transition-transform duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:translate-y-0.5 motion-reduce:transition-none motion-reduce:group-hover:translate-y-0"
               />
             </Button>
             <Button href="#contact" variant="link">
-              Start a project
+              Tell me about your project
             </Button>
           </motion.div>
         </motion.div>

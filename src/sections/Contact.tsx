@@ -27,9 +27,9 @@ export function Contact() {
       </Reveal>
 
       <Reveal delay={0.12}>
-        <p className="mt-6 max-w-[48ch] font-sans text-lg leading-relaxed text-muted">
-          Open to freelance and contract work — design and build, end to end. Tell me what
-          you&rsquo;re making.
+        <p className="mt-6 max-w-[48ch] text-pretty font-sans text-lg leading-relaxed text-muted">
+          I take freelance and contract work, design and code together. Tell me what you&rsquo;re
+          making and when it needs to be live.
         </p>
       </Reveal>
 

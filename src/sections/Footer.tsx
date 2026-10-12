@@ -35,7 +35,7 @@ export function Footer() {
               </span>
             </span>
             <p className="mt-3 font-sans text-sm leading-relaxed text-muted">
-              Designer &amp; front-end engineer — idea to live.
+              Designer &amp; front-end engineer, from idea to live site.
             </p>
           </div>
 

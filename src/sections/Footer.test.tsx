@@ -8,7 +8,9 @@ describe('Footer', () => {
     const { container } = render(<Footer />)
     expect(container.querySelector('footer')).toBeInTheDocument()
     expect(screen.getByText('Vitalina Nikulina')).toBeInTheDocument()
-    expect(screen.getByText(/idea to live\./i)).toBeInTheDocument()
+    expect(
+      screen.getByText('Designer & front-end engineer, from idea to live site.'),
+    ).toBeInTheDocument()
   })
 
   it('renders the build credit', () => {

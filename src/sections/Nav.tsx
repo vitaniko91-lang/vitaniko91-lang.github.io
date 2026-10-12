@@ -53,7 +53,7 @@ function NavLink({ href, label, onClick }: LinkDef & { onClick?: () => void }) {
  * Sticky gallery nav. Transparent over the hero, then on scroll past ~8px it
  * gains a translucent near-black backdrop + a hairline bottom rule (passive
  * scroll listener, class toggle). Desktop shows the wordmark, three anchor
- * links and a restrained "Start a project" CTA; below md it collapses to the
+ * links and a restrained "Tell me about your project" CTA; below md it collapses to the
  * wordmark + an accessible hamburger menu (aria-expanded/controls, Esc closes).
  */
 export function Nav() {
@@ -127,7 +127,7 @@ export function Nav() {
             <NavLink key={link.href} {...link} />
           ))}
           <Button href="#contact" variant="outline" className="px-5 py-2.5 text-sm">
-            Start a project
+            Tell me about your project
           </Button>
         </nav>
 
@@ -182,7 +182,7 @@ export function Nav() {
                 className="mt-3 w-full"
                 onClick={() => setOpen(false)}
               >
-                Start a project →
+                Tell me about your project →
               </Button>
             </Container>
           </motion.div>

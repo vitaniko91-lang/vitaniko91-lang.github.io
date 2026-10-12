@@ -36,10 +36,10 @@ export function Work() {
           Selected work
         </p>
         <h2 className="mt-6 max-w-3xl font-display text-[clamp(1.875rem,4.4vw,2.75rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-paper">
-          Proof of range.
+          {cases.length} projects, all live.
         </h2>
         <p className="mt-4 max-w-2xl font-sans text-lg leading-relaxed text-muted">
-          Every project its own art direction — all designed, built, and shipped.
+          Each one has its own art direction, and you can open every one in the browser.
         </p>
       </Reveal>
 
